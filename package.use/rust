@@ -1,0 +1,3 @@
+
+dev-lang/rust clippy system-llvm lto
+virtual/rust rustfmt

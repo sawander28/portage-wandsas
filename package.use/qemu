@@ -1,0 +1,4 @@
+
+
+app-emulation/qemu -curl io-uring -jpeg numa -opengl -oss -png -pulseaudio spice usb -vnc
+

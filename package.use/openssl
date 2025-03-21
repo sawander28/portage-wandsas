@@ -1,0 +1,7 @@
+app-alternatives/tar -gnu libarchive
+app-alternatives/yacc -bison byacc
+app-crypt/signify verify-sig
+dev-libs/libpcre2 libedit -readline
+dev-libs/libedit static-libs
+dev-libs/openssl rfc3779 static-libs verify-sig
+sys-libs/ncurses static-libs

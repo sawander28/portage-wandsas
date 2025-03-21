@@ -1,0 +1,6 @@
+app-crypt/gcr gtk
+gnome-extra/nm-applet wayland -X
+x11-libs/gtk+ wayland -X
+gui-libs/gtk4 wayland -X
+dev-libs/glib introspection
+media-libs/mesa wayland

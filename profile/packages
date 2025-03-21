@@ -1,0 +1,5 @@
+*app-arch/libarchive
+*app-arch/zstd
+*dev-vcs/git
+*sys-apps/man-pages
+*sys-libs/timezone-data

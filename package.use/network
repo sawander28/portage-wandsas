@@ -1,0 +1,4 @@
+
+net-misc/networkmanager connection-sharing dhcpcd -gtk-doc nftables modemmanager -policykit
+net-wireless/wpa_supplicant ap wps
+net-wireless/wpa_supplicant ap wps

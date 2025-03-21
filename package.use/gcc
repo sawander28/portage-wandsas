@@ -1,0 +1,9 @@
+
+sys-apps/busybox savedconfig
+
+sys-devel/binutils multitarget
+
+sys-devel/gcc
+
+sys-devel/gdb multitarget python
+

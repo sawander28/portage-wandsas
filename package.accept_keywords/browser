@@ -1,0 +1,20 @@
+# netsurf
+dev-lang/duktape ~amd64
+dev-libs/libcss ~amd64
+dev-libs/libnsutils ~amd64
+dev-libs/libwapcaplet ~amd64
+dev-libs/nsgenbind ~amd64
+dev-util/netsurf-buildsystem ~amd64
+media-libs/libnsbmp ~amd64
+media-libs/libnsgif ~amd64
+media-libs/libnspsl ~amd64
+media-libs/librosprite ~amd64
+media-libs/libsvgtiny ~amd64
+net-libs/libdom ~amd64
+www-client/netsurf ~amd64
+
+# firefox
+www-client/firefox ~amd64
+
+# chromium
+www-client/chromium ~amd64

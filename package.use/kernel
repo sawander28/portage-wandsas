@@ -1,0 +1,18 @@
+app-alternatives/cpio -gnu libarchive
+app-alternatives/bc gh -gnu
+
+sys-apps/busybox savedconfig
+sys-apps/systemd-utils boot kernel-install -secure-boot ukify udev 
+sys-apps/util-linux -cramfs pam suid static-libs uuidd verify-sig 
+sys-libs/libcap pam
+
+
+# firmware
+sys-firmware/intel-microcode initramfs hostonly
+sys-kernel/linux-firmware compress-zstd -deduplicate -initramfs redistributable savedconfig
+
+# generic Gentoo kernel
+sys-kernel/installkernel efistub dracut -systemd -systemd-boot uki -ukify
+sys-kernel/gentoo-kernel initramfs modules-sign modules-compress savedconfig
+sys-kernel/gentoo-kernel-bin initramfs modules-sign modules-compress savedconfig
+

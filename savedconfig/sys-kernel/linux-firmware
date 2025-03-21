@@ -1,0 +1,5 @@
+/rtlwifi/rtl8723bu_nic.bin.zst
+intel/*.bin.zst
+amd/amd*.sbin.zst
+amdgpu/*.bin.zst
+radeon/*.bin.zst

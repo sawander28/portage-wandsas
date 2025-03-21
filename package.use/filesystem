@@ -1,0 +1,6 @@
+sys-fs/dosfstools compat
+# filesystem
+sys-fs/cryptsetup urandom -static-libs
+sys-fs/lvm2 lvm
+sys-fs/zfs kernel-builtin pam rootfs
+sys-fs/zfs-kmod modules-sign modules-compress
