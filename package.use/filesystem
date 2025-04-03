@@ -4,3 +4,10 @@ sys-fs/cryptsetup urandom -static-libs
 sys-fs/lvm2 lvm
 sys-fs/zfs kernel-builtin pam rootfs
 sys-fs/zfs-kmod modules-sign modules-compress
+
+dev-libs/cyrus-sasl openldap kerberos
+net-fs/nfs-utils kerberos ldap sasl 
+net-libs/libtirpc kerberos
+
+sys-apps/util-linux -cramfs pam suid static-libs uuidd verify-sig 
+sys-libs/libcap pam

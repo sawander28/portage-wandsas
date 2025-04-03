@@ -1,18 +1,28 @@
-app-alternatives/cpio -gnu libarchive
-app-alternatives/bc gh -gnu
 
-sys-apps/busybox savedconfig
-sys-apps/systemd-utils boot kernel-install -secure-boot ukify udev 
-sys-apps/util-linux -cramfs pam suid static-libs uuidd verify-sig 
-sys-libs/libcap pam
+#
+# systemd boot dracut installkernel uki ukify
+#
+sys-apps/systemd-utils acl boot kernel-install kmod modules-compress modules-sign savedconfig -sysusers tmpfiles udev -ukify
+sys-kernel/installkernel dracut efistub -grub systemd systemd-boot -ugrd uki -ukify
 
 
-# firmware
-sys-firmware/intel-microcode initramfs hostonly
-sys-kernel/linux-firmware compress-zstd -deduplicate -initramfs redistributable savedconfig
+#
+# Gentoo-kernel
+#
+sys-kernel/gentoo-kernel experimental hardened -initramfs modules-compress modules-sign savedconfig
 
-# generic Gentoo kernel
-sys-kernel/installkernel efistub dracut -systemd -systemd-boot uki -ukify
-sys-kernel/gentoo-kernel initramfs modules-sign modules-compress savedconfig
-sys-kernel/gentoo-kernel-bin initramfs modules-sign modules-compress savedconfig
+sys-kernel/gentoo-kernel-bin -initramfs modules-compress
 
+
+#
+# Gentoo-sources vanilla-sources
+#
+sys-kernel/gentoo-sources
+sys-kernel/vanilla-sources
+
+
+#
+# linux-firmware
+#
+sys-firmware/intel-microcode dist-kernel hostonly  initramfs split-ucode
+sys-kernel/linux-firmware compress-zstd -deduplicate initramfs redistributable savedconfig

@@ -1,4 +1,5 @@
 
-net-misc/networkmanager connection-sharing dhcpcd -gtk-doc nftables modemmanager -policykit
-net-wireless/wpa_supplicant ap wps
+net-misc/networkmanager -elogind -dhcpcd -gtk-doc iptables nss nftables modemmanager policykit resolvconf -wext sysusers -ppp -modemmanager
+
+
 net-wireless/wpa_supplicant ap wps
