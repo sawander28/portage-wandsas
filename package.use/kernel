@@ -17,8 +17,7 @@ sys-kernel/gentoo-kernel-bin -initramfs modules-compress
 #
 # Gentoo-sources vanilla-sources
 #
-sys-kernel/gentoo-sources
-sys-kernel/vanilla-sources
+sys-kernel/gentoo-sources experimental symlink
 
 
 #

@@ -1,0 +1,81 @@
+--- /var/db/repos/gentoo/net-fs/nfs-utils/files/nfs.confd	2015-08-09 22:34:52.000000000 +0200
++++ /etc/conf.d/nfs	2016-02-02 10:36:39.447152376 +0100
+@@ -3,8 +3,17 @@
+ # If you wish to set the port numbers for lockd,
+ # please see /etc/sysctl.conf
+ 
++# If you do not set values for the NEED_ options, they will be attempted
++# autodetected; this should be sufficient for most people. Valid alternatives
++# for the NEED_ options are "yes" and "no".
++
++# Do you want to start the statd daemon? It is not needed for NFSv4.
++NEED_STATD=no
++
++# Do you want to start the idmapd daemon? It is only needed for NFSv4.
++NEED_IDMAPD=yes
++
+ # Optional services to include in default `/etc/init.d/nfs start`
+-# For NFSv4 users, you'll want to add "rpc.idmapd" here.
+ NFS_NEEDED_SERVICES=""
+ 
+ # Options to pass to rpc.nfsd
+--- /var/db/repos/gentoo/net-fs/nfs-utils/files/nfs.initd	2015-08-09 22:34:52.000000000 +0200
++++ /etc/init.d/nfs	2016-02-02 10:41:46.994274123 +0100
+@@ -1,7 +1,7 @@
+ #!/sbin/runscript
+ # Copyright 1999-2014 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+-# $Id$
++# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.28 2014/06/20 06:21:22 vapier Exp $
+ 
+ extra_started_commands="reload"
+ 
+@@ -15,6 +15,22 @@
+     nfsd=/usr/sbin/rpc.nfsd
+ smnotify=/usr/sbin/sm-notify
+ 
++
++case "$NEED_STATD" in
++	yes|no)
++		;;
++	*)
++		NEED_STATD=yes
++		;;
++esac
++case "$NEED_IDMAPD" in
++	yes|no)
++		;;
++	*)
++		NEED_IDMAPD=yes
++		;;
++esac
++
+ depend() {
+ 	local myneed=""
+ 	# XXX: no way to detect NFSv4 is desired and so need rpc.idmapd
+@@ -28,8 +44,14 @@
+ 			}
+ 		}' /etc/exports /etc/exports.d/*.exports 2>/dev/null
+ 	)"
++	if [ "$NEED_STATD" = yes ]; then
++		NFS_NEEDED_SERVICES="$NFS_NEEDED_SERVICES rpc.statd"
++	fi
++	if [ "$NEED_IDMAPD" = yes ]; then
++		NFS_NEEDED_SERVICES="$NFS_NEEDED_SERVICES rpc.idmapd"
++	fi
+ 	config /etc/exports /etc/exports.d/*.exports
+-	need portmap rpc.statd ${myneed} ${NFS_NEEDED_SERVICES}
++	need portmap ${NFS_NEEDED_SERVICES} ${myneed}
+ 	use ypbind net dns rpc.rquotad rpc.idmapd rpc.svcgssd
+ 	after quota
+ }
+@@ -99,7 +121,9 @@
+ 	local ret=0
+ 	start_it mountd ${mountd} ${OPTS_RPC_MOUNTD}
+ 	start_it daemon ${nfsd} ${OPTS_RPC_NFSD}
++	if [ "$NEED_STATD" = yes ]; then
+ 	[ -x "${smnotify}" ] && start_it smnotify ${smnotify} ${OPTS_SMNOTIFY}
++	fi
+ 	return ${ret}
+ }
+ 
