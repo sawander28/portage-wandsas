@@ -16,11 +16,12 @@ dev-python/lit ~amd64
 llvm-core/clang ~amd64
 llvm-core/clang-common ~amd64
 llvm-core/clang-runtime ~amd64
-llvm-core/lld ~amd64
 llvm-core/llvm ~amd64
 llvm-core/llvm-common ~amd64
 llvm-core/llvmgold ~amd64
 llvm-core/llvm-toolchain-symlinks ~amd64
+llvm-core/clang-toolchain-symlinks ~amd64
+llvm-runtimes/openmp ~amd64
 llvm-runtimes/compiler-rt ~amd64
 llvm-runtimes/compiler-rt-sanitizers ~amd64
 llvm-runtimes/libcxx ~amd64
@@ -85,12 +86,13 @@ sys-firmware/intel-microcode ~amd64
 sys-firmware/nvidia-firmware ~amd64
 
 # kernel sources
-virtual/dist-kernel ~amd64
+=virtual/dist-kernel-6.13.9 ~amd64
 =sys-kernel/gentoo-sources-6.13.9 ~amd64
 sys-kernel/vanilla-sources ~amd64
 
 # dist-kernel - build generic kernel with Gentoo patches
-sys-kernel/gentoo-kernel ~amd64
+#sys-kernel/gentoo-kernel ~amd64
+=sys-kernel/gentoo-kernel-6.13.9 ~amd64
 sys-kernel/gentoo-kernel-bin ~amd64
 sys-kernel/installkernel ~amd64
 
@@ -103,8 +105,8 @@ sys-kernel/installkernel ~amd64
 ###############################################################################
 # zfs
 ###############################################################################
-#sys-fs/zfs ~amd64
-#sys-fs/zfs-kmod ~amd64
-=sys-fs/zfs-9999 **
-=sys-fs/zfs-kmod-9999 **
+sys-fs/zfs ~amd64
+sys-fs/zfs-kmod ~amd64
+#=sys-fs/zfs-9999 **
+#=sys-fs/zfs-kmod-9999 **
 

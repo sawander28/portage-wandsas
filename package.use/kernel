@@ -1,27 +1,15 @@
 
-#
 # systemd boot dracut installkernel uki ukify
-#
 sys-apps/systemd-utils acl boot kernel-install kmod modules-compress modules-sign savedconfig -sysusers tmpfiles udev -ukify
 sys-kernel/installkernel dracut efistub -grub systemd systemd-boot -ugrd uki -ukify
 
 
-#
 # Gentoo-kernel
-#
-sys-kernel/gentoo-kernel experimental hardened -initramfs modules-compress modules-sign savedconfig
-
-sys-kernel/gentoo-kernel-bin -initramfs modules-compress
-
-
-#
-# Gentoo-sources vanilla-sources
-#
+sys-kernel/gentoo-kernel experimental hardened initramfs modules-compress modules-sign savedconfig
+sys-kernel/gentoo-kernel-bin initramfs modules-compress
 sys-kernel/gentoo-sources experimental symlink
 
 
-#
 # linux-firmware
-#
 sys-firmware/intel-microcode dist-kernel hostonly  initramfs split-ucode
 sys-kernel/linux-firmware compress-zstd -deduplicate initramfs redistributable savedconfig
