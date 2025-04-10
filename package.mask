@@ -1,2 +1,2 @@
-<virtual/dist-kernel-6.13.9
-<sys-kernel/gentoo-kernel-6.13.9
+>=virtual/dist-kernel-6.13.10
+>=sys-kernel/gentoo-kernel-6.13.10

@@ -1,0 +1,7 @@
+# sway + friends
+gui-wm/sway X tray wallpapers
+gui-apps/swaybg gdk-pixbuf
+gui-libs/wlroots X
+media-libs/libepoxy X
+media-libs/libglvnd X
+media-libs/mesa X

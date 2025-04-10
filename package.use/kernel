@@ -1,7 +1,7 @@
 
 # systemd boot dracut installkernel uki ukify
 sys-apps/systemd-utils acl boot kernel-install kmod modules-compress modules-sign savedconfig -sysusers tmpfiles udev -ukify
-sys-kernel/installkernel dracut efistub -grub systemd systemd-boot -ugrd uki -ukify
+sys-kernel/installkernel dracut efistub -grub -systemd -systemd-boot -ugrd -uki -ukify
 
 
 # Gentoo-kernel

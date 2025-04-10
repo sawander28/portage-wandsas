@@ -71,30 +71,28 @@ sys-libs/libnvme ~amd64
 ###############################################################################
 sys-kernel/linux-headers ~amd64
 
-# uefi boot
+# uefi stub boot
+sys-kernel/ugrd
 sys-apps/systemd-utils ~amd64
 sys-boot/uefi-mkconfig ~amd64
 
 # dracut initramfs
 sys-kernel/dracut ~amd64
-#=sys-kernel/dracut-9999 **
 net-misc/networkmanager ~amd64
+
+# firmware
 app-emulation/virt-firmware ~amd64
-#sys-kernel/linux-firmware ~amd64
 =sys-kernel/linux-firmware-99999999 **
 sys-firmware/intel-microcode ~amd64
 sys-firmware/nvidia-firmware ~amd64
 
 # kernel sources
-=virtual/dist-kernel-6.13.9 ~amd64
-=sys-kernel/gentoo-sources-6.13.9 ~amd64
-sys-kernel/vanilla-sources ~amd64
-
-# dist-kernel - build generic kernel with Gentoo patches
-#sys-kernel/gentoo-kernel ~amd64
-=sys-kernel/gentoo-kernel-6.13.9 ~amd64
-sys-kernel/gentoo-kernel-bin ~amd64
+virtual/dist-kernel ~amd64
+sys-kernel/linux-headers ~amd64
+sys-kernel/gentoo-kernel ~amd64
+sys-kernel/gentoo-sources ~amd64
 sys-kernel/installkernel ~amd64
+
 
 ###############################################################################
 # musl
@@ -110,3 +108,6 @@ sys-fs/zfs-kmod ~amd64
 #=sys-fs/zfs-9999 **
 #=sys-fs/zfs-kmod-9999 **
 
+=gui-wm/sway-9999 **
+=gui-libs/wlroots-9999 **
+app-shells/dash ~amd64
