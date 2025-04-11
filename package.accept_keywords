@@ -11,28 +11,32 @@ dev-lang/go ~amd64
 ###############################################################################
 # llvm
 ###############################################################################
-dev-util/lldb ~amd64
-dev-python/lit ~amd64
 llvm-core/clang ~amd64
 llvm-core/clang-common ~amd64
 llvm-core/clang-runtime ~amd64
+llvm-core/clang-toolchain-symlinks ~amd64
 llvm-core/llvm ~amd64
 llvm-core/llvm-common ~amd64
 llvm-core/llvmgold ~amd64
 llvm-core/llvm-toolchain-symlinks ~amd64
-llvm-core/clang-toolchain-symlinks ~amd64
+llvm-core/lld ~amd64
+llvm-core/lldb ~amd64
 llvm-runtimes/openmp ~amd64
 llvm-runtimes/compiler-rt ~amd64
 llvm-runtimes/compiler-rt-sanitizers ~amd64
 llvm-runtimes/libcxx ~amd64
 llvm-runtimes/libcxxabi ~amd64
-sys-libs/libomp ~amd64
 llvm-runtimes/libunwind ~amd64
 
 ###############################################################################
 # openrc
 ###############################################################################
 sys-apps/openrc ~amd64
+
+###############################################################################
+# portage
+###############################################################################
+app-portage/eix ~amd64
 
 ###############################################################################
 # rust
@@ -111,3 +115,4 @@ sys-fs/zfs-kmod ~amd64
 =gui-wm/sway-9999 **
 =gui-libs/wlroots-9999 **
 app-shells/dash ~amd64
+media-libs/mesa ~amd64
