@@ -1,5 +1,9 @@
 export TZ=":Etc/UTC"
 
+[ "`type -t BashrcdMain`" = function ] || \
+. "${PORTAGE_CONFIGROOT%/}/etc/portage/bashrc.d/bashrcd.sh"
+BashrcdMain "$@"
+
 pre_src_prepare() {
 	# Always apply user patches
 	# From https://wiki.gentoo.org/wiki//etc/portage/patches

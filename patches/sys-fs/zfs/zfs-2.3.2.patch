@@ -1,0 +1,16 @@
+diff '--color=auto' -ur a/tests/zfs-tests/cmd/statx.c b/tests/zfs-tests/cmd/statx.c
+--- a/tests/zfs-tests/cmd/statx.c	2025-05-01 20:23:23.844216296 +0200
++++ b/tests/zfs-tests/cmd/statx.c	2025-05-04 12:49:46.343838009 +0200
+@@ -251,10 +251,10 @@
+ 
+ 		switch (f->mask) {
+ 		case STATX_TYPE:
+-			printf("type: %u\n", stx.stx_mode & S_IFMT);
++			//printf("type: %u\n", stx.stx_mode & S_IFMT);
+ 			break;
+ 		case STATX_MODE:
+-			printf("mode: %u\n", stx.stx_mode & ~S_IFMT);
++			//printf("mode: %u\n", stx.stx_mode & ~S_IFMT);
+ 			break;
+ 		case STATX_NLINK:
+ 			printf("nlink: %u\n", stx.stx_nlink);

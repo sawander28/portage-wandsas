@@ -1,0 +1,4 @@
+
+net-firewall/iptables -nftables conntrack netlink pcap static-libs
+
+net-firewall/nftables -static-libs -xtables

@@ -1,0 +1,9 @@
+#media-video/pipewire X doc echo-cancel extra gsettings liblc3 lv2 man pipewire-alsa   sound-server v4l roc
+
+media-libs/libcanberra udev alsa pulseaudio 
+
+#media-video/ffmpeg X alsa fdk jpeg2k jpegx lame lcms libaom librtmp libcaca libilbc -libplacebo -librtmp libsoxr modplus openal opencl opengl openh264 openmpt opus pulseaudio sdl snappy soc -vulkan 
+#media-video/ffmpeg X alsa fdk jpeg2k lame lcms openal -opencl openh264 opus pulseaudio
+#media-video/ffmpeg libsoxr network openssl pulseaudio
+
+media-libs/libsdl2 X alsa gles1 gles2 libsamplerate opengl pipewire pulseaudio 

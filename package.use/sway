@@ -1,7 +1,14 @@
 # sway + friends
+app-crypt/pinentry X gtk keyring wayland
+app-text/poppler cxx
+dev-libs/efl app-text/poppler cxx
+dev-libs/efl X
 gui-wm/sway X tray wallpapers
 gui-apps/swaybg gdk-pixbuf
 gui-libs/wlroots X
 media-libs/libepoxy X
 media-libs/libglvnd X
 media-libs/mesa X
+sys-auth/seatd elogind -server
+sys-auth/elogind policykit doc
+sys-apps/dbus X doc elogind

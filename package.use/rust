@@ -1,3 +1,3 @@
 
-dev-lang/rust clippy system-llvm lto
+dev-lang/rust clippy rls rust-src rustfmt system-llvm
 virtual/rust rustfmt

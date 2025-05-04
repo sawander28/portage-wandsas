@@ -1,9 +1,8 @@
 
-sys-apps/busybox savedconfig
 
-sys-devel/binutils multitarget
+sys-devel/gcc doc lto
+sys-devel/binutils doc multitarget
+sys-libs/binutils-libs multitarget
+dev-debug/gdb multitarget python source-highlight
 
-sys-devel/gcc
-
-sys-devel/gdb multitarget python
 

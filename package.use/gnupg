@@ -1,1 +1,1 @@
-app-crypt/gnupg tpm user-socket doc
+app-crypt/gnupg -tpm ldap user-socket doc tools

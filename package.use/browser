@@ -1,3 +1,7 @@
 
-www-client/chromium -atk -hangouts system-ffmpeg -wayland
-www-client/firefox -clang eme-free -gmp-autoupdate system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-png system-sqlite -wayland
+www-client/chromium -atk -hangouts system-ffmpeg wayland
+www-client/firefox clang eme-free -gmp-autoupdate system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-png system-sqlite wayland l10n_en-GB
+
+www-client/firefox-bin -gmp-autoupdate  l10n_en-GB
+
+www-client/netsurf bitmap fbcon gtk

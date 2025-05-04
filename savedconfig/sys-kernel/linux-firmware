@@ -206,3 +206,6 @@ intel/ibt-18-0-1.ddc.zst
 intel/ibt-11-5.sfi.zst
 isci/isci_firmware.bin.zst
 rtlwifi/rtl8723bu_nic.bin.zst
+nouveau/nv108_fuc084
+nouveau/nv108_fuc085
+nouveau/nv108_fuc086
