@@ -1,5 +1,11 @@
+
+app-admin/sudo -sendmail ldap sasl
 app-crypt/mit-krb5 openldap
 dev-libs/cyrus-sasl openldap kerberos
-net-fs/nfs-utils junction kerberos openldap nfsv4 -nfsv3 ldap sasl
+dev-libs/libnl utils
+net-fs/nfs-utils junction caps kerberos ldap -nfsv3 sasl
+net-fs/autofs ldap mount-locking
 net-libs/libtirpc kerberos
-net-nds/openldap kerberos kinit sasl -cleartext
+net-nds/openldap autoca -cleartext kinit sasl
+
+sys-auth/sssd nfsv4

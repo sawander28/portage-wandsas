@@ -1,0 +1,39 @@
+xfce-base/thunar exif libnotify udisks
+xfce-extra/taskmanager
+
+x11-libs/gtk+ X
+# required by xfce-base/xfce4-panel-4.20.4::gentoo[dbusmenu]
+# # required by xfce-base/thunar-4.20.2::gentoo[trash-panel-plugin]
+# # required by thunar (argument)
+dev-libs/libdbusmenu gtk3
+# # required by x11-libs/gtk+-3.24.48::gentoo
+# # required by x11-misc/notification-daemon-3.20.0-r1::gentoo
+# # required by virtual/notification-daemon-0::gentoo[-kde,-gnome]
+# # required by x11-libs/libnotify-0.8.3::gentoo
+# # required by xfce-base/thunar-4.20.2::gentoo[libnotify]
+# # required by thunar (argument)
+media-libs/libepoxy X
+# # required by x11-libs/gtk+-3.24.48::gentoo
+# # required by x11-misc/notification-daemon-3.20.0-r1::gentoo
+# # required by virtual/notification-daemon-0::gentoo[-kde,-gnome]
+# # required by x11-libs/libnotify-0.8.3::gentoo
+# # required by xfce-base/thunar-4.20.2::gentoo[libnotify]
+# # required by thunar (argument)
+x11-libs/cairo X
+# # required by gnome-base/gnome-keyring-46.2::gentoo
+# # required by virtual/secret-service-0::gentoo
+# # required by app-crypt/libsecret-0.21.4-r2::gentoo
+app-crypt/gcr gtk
+
+# required by thunar (argument)
+gnome-base/gvfs udisks
+# # required by dev-libs/gobject-introspection-1.82.0-r2::gentoo
+# # required by dev-python/pygobject-3.50.0::gentoo
+# # required by sys-libs/libblockdev-3.1.1-r1::gentoo[python_single_target_python3_13]
+# # required by sys-fs/udisks-2.10.1-r3::gentoo
+# # required by gnome-base/gvfs-1.56.1-r1::gentoo[udisks]
+# # required by xfce-base/thunar-4.20.2::gentoo[trash-panel-plugin]
+# # required by thunar (argument)
+dev-libs/glib introspection
+
+dev-python/pycairo X

@@ -1,10 +1,17 @@
+*app-admin/doas
+*app-admin/sudo
+*app-admin/metalog
 *app-arch/libarchive
 *app-arch/zstd
+*app-crypt/gnupg
+*app-crypt/pinentry
 *app-editors/vim
+*app-eselect/eselect-python
 *app-misc/tmux
 *app-portage/eix
 *app-portage/gentoolkit
 *app-shells/bash-completion
 *dev-vcs/git
+*net-misc/curl
 *sys-apps/man-pages
 *sys-libs/timezone-data
