@@ -1,10 +1,4 @@
 
-#llvm-core/llvm -doc
-#llvm-core/clang -doc
-llvm-core/clang-common -default-compiler-rt -default-libcxx -default-lld -llvm-libunwind
-llvm-core/clang-runtime compiler-rt libcxx  default-compiler-rt default-libcxx default-lld llvm-libunwind openmp offload -sanitize
+llvm-core/clang-runtime compiler-rt libcxx  default-compiler-rt default-libcxx default-lld llvm-libunwind openmp offload sanitize
 
-llvm-runtimes/compiler-rt
-llvm-runtimes/libcxx libcxxabi libunwind
-llvm-runtimes/libcxxabi libunwind
 llvm-runtimes/libunwind static-libs

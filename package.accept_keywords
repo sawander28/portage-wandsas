@@ -1,15 +1,16 @@
 # podman
-app-containers/podman ~amd64
-app-containers/buildah ~amd64
-dev-python/podman ~amd64
+#app-containers/podman ~amd64
+#app-containers/buildah ~amd64
+#dev-python/podman ~amd64
 # browser
-www-client/firefox-bin ~amd64
-www-client/firefox ~amd64
-www-client/chromium ~amd64
+#www-client/firefox-bin ~amd64
+#www-client/firefox ~amd64
+#www-client/chromium ~amd64
 # editor
 app-editors/vim ~amd64
 # cmdline
 app-crypt/gnupg ~amd64
+app-crypt/mit-krb5 ~amd64
 
 ###############################################################################
 # Wayland Desktop
@@ -17,9 +18,9 @@ app-crypt/gnupg ~amd64
 =gui-wm/dwl-9999 **
 =gui-wm/sway-9999 **
 =gui-libs/wlroots-9999 **
-app-shells/dash ~amd64
-dev-libs/wayland ~amd64
-media-libs/mesa ~amd64
+=dev-libs/wayland--9999 **
+=x11-base/xwayland-9999 **
+=media-libs/mesa-9999 **
 
 ###############################################################################
 # dev-lang
@@ -68,10 +69,6 @@ llvm-runtimes/libcxxabi ~amd64
 llvm-runtimes/libunwind ~amd64
 llvm-runtimes/offload ~amd64
 app-vim/clang-format ~amd64
-###############################################################################
-# sys-apps/openrc
-###############################################################################
-sys-apps/openrc ~amd64
 
 ###############################################################################
 # sys-apps/portage
@@ -104,6 +101,7 @@ net-dns/s6-dns ~amd64
 sys-apps/busybox ~amd64
 sys-apps/systemd-utils ~amd64
 sys-kernel/dracut ~amd64
+sys-boot/uefi-mkconfig ~amd64
 
 ###############################################################################
 # Network
@@ -116,8 +114,6 @@ net-dns/dnsmasq ~amd64
 ###############################################################################
 # kernel
 ###############################################################################
-sys-kernel/linux-headers ~amd64
-
 virtual/dist-kernel ~amd64
 sys-kernel/installkernel ~amd64
 sys-kernel/linux-headers ~amd64

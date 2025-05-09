@@ -1,5 +1,10 @@
 *app-arch/libarchive
 *app-arch/zstd
+*app-editors/vim
+*app-misc/tmux
+*app-portage/eix
+*app-portage/gentoolkit
+*app-shells/bash-completion
 *dev-vcs/git
 *sys-apps/man-pages
 *sys-libs/timezone-data

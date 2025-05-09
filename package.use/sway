@@ -1,14 +1,8 @@
-# sway + friends
-app-crypt/pinentry X gtk keyring wayland
-app-text/poppler cxx
-dev-libs/efl app-text/poppler cxx
-dev-libs/efl X
-gui-wm/sway X tray wallpapers
-gui-apps/swaybg gdk-pixbuf
-gui-libs/wlroots X
-media-libs/libepoxy X
+gui-wm/sway -X tray
+gui-libs/wlroots -X -vulkan -x11-backend -xcb-errors
+media-libs/libepoxy -X
 media-libs/libglvnd X
-media-libs/mesa X
-sys-auth/seatd elogind -server
-sys-auth/elogind policykit doc
-sys-apps/dbus X doc elogind
+media-libs/mesa X lm-sensors vaapi -vdpau -vulkan -xa
+
+x11-terms/alacritty -X
+x11-terms/kitty -X

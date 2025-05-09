@@ -2,5 +2,4 @@
 net-misc/networkmanager elogind dhcpcd -gtk-doc iptables nss nftables modemmanager policykit resolvconf -wext -sysusers -ppp -modemmanager
 
 net-misc/connman doc wireguard 
-net-misc/dhcp ldap
 net-wireless/wpa_supplicant ap wps

@@ -5,7 +5,6 @@ sys-fs/lvm2 lvm
 sys-fs/zfs pam rootfs
 sys-fs/zfs-kmod modules-sign modules-compress
 
-sys-apps/util-linux -cramfs pam suid static-libs uuidd verify-sig 
 sys-libs/libcap pam
 
 sys-fs/dmraid -mini

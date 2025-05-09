@@ -9,3 +9,5 @@ sys-kernel/gentoo-sources experimental symlink
 # linux-firmware
 sys-firmware/intel-microcode dist-kernel hostonly  initramfs split-ucode
 sys-kernel/linux-firmware compress-zstd -deduplicate initramfs redistributable savedconfig
+
+sys-apps/util-linux -cramfs pam suid static-libs uuidd verify-sig 

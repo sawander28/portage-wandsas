@@ -1,5 +1,5 @@
 app-crypt/mit-krb5 openldap
 dev-libs/cyrus-sasl openldap kerberos
-net-nds/openldap kerberos kinit sasl -cleartext sha2
-net-fs/nfs-utils kerberos openldap nfsv4 -nfsv3 ldap sasl
+net-fs/nfs-utils junction kerberos openldap nfsv4 -nfsv3 ldap sasl
 net-libs/libtirpc kerberos
+net-nds/openldap kerberos kinit sasl -cleartext
